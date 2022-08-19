@@ -8,4 +8,13 @@
 - valorCustoTotal = valorCusto + impostoSobreOCusto
 - lucro = valorVenda - valorCustoTotal (lucro de um produto) 
 */
+const custo = 10, venda = 15;
+let lucro1000;
 
+if(custo === 0 || venda === 0) {
+    console.log('Valores inválidos: Reinicie o programa.');
+}
+
+lucro1000 = (((venda - custo) /100)*20) * 1000;
+
+console.log('Seu lucro foi: R$', lucro1000);
