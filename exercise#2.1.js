@@ -9,16 +9,16 @@ Retorno esperado: false
 
 let palavra = 'natan';
 
-console.log(checkPalindrom (palavra));
+console.log(checkPalindrom(palavra));
 
-function checkPalindrom (palavra) {
-    let palindrom = '';
-    for (let i = palavra.length - 1; i >= 0; i -= 1) {
-        palindrom += palavra[i];
-    }
-    if (palindrom === palavra) {
-        return true;
-    } else if (palindrom !== palavra) {
-        return false;
-    }
+function checkPalindrom(palavra) {
+  let palindrom = '';
+  for (let i = palavra.length - 1; i >= 0; i -= 1) {
+    palindrom += palavra[i];
+  }
+  if (palindrom === palavra) {
+    return true;
+  } else if (palindrom !== palavra) {
+    return false;
+  }
 }

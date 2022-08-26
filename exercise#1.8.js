@@ -6,16 +6,16 @@ let leitor = {
   sobrenome: 'Pessoa',
   idade: 21,
   livrosFavoritos: [
-      {
-          titulo: 'O Pior Dia de Todos',
-          autor: 'Daniela Kopsch',
-          editora: 'Tordesilhas',
-      },
-      {
-          titulo: 'Harry Potter e o Prisioneiro de Azkaban',
-          autor: 'JK Rowling',
-          editora: 'Rocco',
-      },
+    {
+      titulo: 'O Pior Dia de Todos',
+      autor: 'Daniela Kopsch',
+      editora: 'Tordesilhas',
+    },
+    {
+      titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+      autor: 'JK Rowling',
+      editora: 'Rocco',
+    },
   ],
 };
 

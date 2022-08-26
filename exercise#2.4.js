@@ -9,13 +9,13 @@ let nomes = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 
 console.log(checkArray(nomes));
 
-function checkArray (array) {
-    let maiorNome = '';
-    for (let i = 0; i < array.length; i += 1) {
-        let teste = array[i];
-        if (teste.length > maiorNome.length) {
-            maiorNome = array[i];
-        }
+function checkArray(array) {
+  let maiorNome = '';
+  for (let i = 0; i < array.length; i += 1) {
+    let teste = array[i];
+    if (teste.length > maiorNome.length) {
+      maiorNome = array[i];
     }
-    return maiorNome;
+  }
+  return maiorNome;
 }

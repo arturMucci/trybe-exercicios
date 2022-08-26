@@ -13,5 +13,4 @@ let leitor = {
     },
   ],
 };
-
 console.log('O livro favorito de', leitor.nome, 'se chama', leitor.livrosFavoritos[0].titulo, '.');
