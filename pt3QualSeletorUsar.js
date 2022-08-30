@@ -17,6 +17,7 @@ let titleSection1_2 = document.querySelectorAll('.emergency-tasks div:nth-child(
 let titleSection2_1 = document.querySelectorAll('.no-emergency-tasks div h3');
 let titleSection2_2 = document.querySelectorAll('.no-emergency-tasks div:nth-child(2) h3');
 const footer = document.getElementById('footer-container');
+
 emergencyTasks1.style.backgroundColor = 'rgb(255, 159, 132)';
 emergencyTasks2.style.backgroundColor = 'rgb(249,219,94)';
 footer.style.backgroundColor = 'rgb(0, 53, 51)';
