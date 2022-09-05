@@ -90,16 +90,19 @@
       main.appendChild(sectionRight);
       sectionLeft.appendChild(image);
       sectionRight.appendChild(list);
+
       for (index = 0; index < numerosPorExtenso.length; index += 1) {
         listItems[index]= document.createElement('li');
         listItems[index].innerText = numerosPorExtenso[index];
         list.appendChild(listItems[index]);
       }
+
       for (index = 0; index < 3; index += 1) {
         title3[index] = document.createElement('h3');
         title3[index].className = 'description';
         main.appendChild(title3[index]);
       }
+      
       main.removeChild(sectionLeft);
       list.removeChild(list.lastElementChild);
       list.removeChild(list.lastElementChild);
