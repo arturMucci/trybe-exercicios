@@ -20,6 +20,7 @@ const monthDays = document.getElementById('days');
 const allDays = document.getElementsByClassName('day');
 const btnContainer = document.getElementsByClassName('buttons-container')[0];
 const holidays = document.getElementsByClassName('holiday');
+const friday = document.getElementsByClassName('friday');
 
 function changeClassName(teste) {
   if (teste.innerText == 4) {
@@ -32,7 +33,7 @@ function changeClassName(teste) {
     teste.className += ' friday';
   }
   if (teste.innerText == 24) {
-    teste.className += ' friday';
+    teste.className += ' holiday';
   }
   if (teste.innerText == 25) {
     teste.className += ' holiday friday';
@@ -55,12 +56,20 @@ function insertDays() {
   }
 }
 
-function insertBtn() {
+function insertBtnHoliday() {
   const btnHoliday = document.createElement('button');
   btnHoliday.id = 'btn-holiday';
   btnHoliday.innerText = 'Feriados';
   btnHoliday.addEventListener('click', changeHolidayColors);
   btnContainer.appendChild(btnHoliday);
+}
+
+function insertBtnFriday() {
+  const btnFriday = document.createElement('button');
+  btnFriday.id = 'btn-friday';
+  btnFriday.innerText = 'Sexta-feira';
+  btnFriday.addEventListener('click', changeFridayText);
+  btnContainer.appendChild(btnFriday);
 }
 
 function changeHolidayColors() {
@@ -75,7 +84,19 @@ function changeHolidayColors() {
   }
 }
 
+function changeFridayText() {
+  const fridays = [4, 11, 18, 25];
+  for (let index = 0; index < friday.length; index += 1) {
+    if (friday[index].innerText !== 'Sextou!') {
+      friday[index].innerText = 'Sextou!';
+    } else if (friday[index].innerText === 'Sextou!') {
+      friday[index].innerText = fridays[index];
+    }
+  }
+}
+
 window.addEventListener('load', () => {
   insertDays();
-  insertBtn();
+  insertBtnHoliday();
+  insertBtnFriday();
 });
