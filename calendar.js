@@ -17,47 +17,36 @@ createDaysOfTheWeek();
 
 let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 const monthDays = document.getElementById('days');
-const btnContainer = document.getElementsByClassName('buttons-container')[0];
-
-function checkHoliday(day) {
-  if (day.innerText == 4) {
-    day.className += ' friday';
-  }
-  if (day.innerText == 11) {
-    day.className += ' friday';
-  }
-  if (day.innerText == 18) {
-    day.className += ' friday';
-  }
-  if (day.innerText == 24) {
-    day.className += ' friday';
-  }
-  if (day.innerText == 25) {
-    day.className += ' holiday friday';
-  }
-  if (day.innerText == 31) {
-    day.className += ' holiday';
-  }
-}
+const allDays = document.getElementsByClassName('day');
 
 function insertDays() {
   for (let index = 0; index < decemberDaysList.length; index += 1) {
-    const days = document.createElement('li');
-    days.innerText = JSON.stringify(decemberDaysList[index]);
-    days.className = 'days';
-    checkHoliday(days);
-    monthDays.appendChild(days);
+    const day = document.createElement('li');
+    day.className = 'day';
+    day.innerText = decemberDaysList[index];
+    if (day.innerText == 4) {
+      day.className += ' friday';
+    }
+    if (day.innerText == 11) {
+      day.className += ' friday';
+    }
+    if (day.innerText == 18) {
+      day.className += ' friday';
+    }
+    if (day.innerText == 24) {
+      day.className += ' friday';
+    }
+    if (day.innerText == 25) {
+      day.className += ' holiday friday';
+    }
+    if (day.innerText == 31) {
+      day.className += ' holiday';
+    }
+    monthDays.appendChild(day);
   }
-}
-
-function createHolidayBtn(string) {
-  const holidayBtn = document.createElement('button');  
-  holidayBtn.id = 'btn-holiday';
-  holidayBtn.innerText = string;
-  btnContainer.appendChild(holidayBtn);
 }
 
 window.addEventListener('load', () => {
   insertDays();
-  createHolidayBtn('Feriados');
+  changeClassNames('Feriado');
 });
