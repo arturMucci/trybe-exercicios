@@ -17,10 +17,13 @@ createDaysOfTheWeek();
 
 let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 const monthDays = document.getElementById('days');
-const allDays = document.getElementsByClassName('day');
 const btnContainer = document.getElementsByClassName('buttons-container')[0];
 const holidays = document.getElementsByClassName('holiday');
 const friday = document.getElementsByClassName('friday');
+const allDays = document.getElementsByClassName('day');
+const btnAdd = document.getElementById('btn-add');
+const myTsks = document.getElementsByClassName('my-tasks')[0];
+const tskInput = document.getElementById('task-input');
 
 function changeClassName(teste) {
   if (teste.innerText == 4) {
@@ -77,7 +80,7 @@ function changeHolidayColors() {
     for (let index = 0; index < holidays.length; index += 1) {
       holidays[index].style.backgroundColor = 'rgb(200, 200, 200)';
     }
-  } else  if (holidays[0].style.backgroundColor === 'rgb(200, 200, 200)') {
+  } else if (holidays[0].style.backgroundColor === 'rgb(200, 200, 200)') {
     for (let index = 0; index < holidays.length; index += 1) {
       holidays[index].style.backgroundColor = 'rgb(238, 238, 238)';
     }
@@ -95,8 +98,45 @@ function changeFridayText() {
   }
 }
 
+function insertColorInput() {
+  const colorInput = document.createElement('input');
+  colorInput.type = 'color';
+  colorInput.style.marginLeft = '10px';
+  colorInput.id = 'tsk-color';
+tskInput.insertAdjacentElement('afterend', colorInput);
+}
+insertColorInput();
+
+function zoomIn(event) {
+  const element = event.target;
+  element.style.fontSize = '26px';
+}
+
+function zoomOut(event) {
+  const element = event.target;
+  element.style.fontSize = '20px';
+}
+
+function addTask() {
+  const tskContainer = document.createElement('section');
+  const newTsk = document.createElement('span');
+  newTsk.innerText = tskInput.value;
+  newTsk.style.backgroundColor = 
+  tskContainer.appendChild(newTsk);
+  tskContainer.className = 'task';
+  tskContainer.style.backgroundColor = colorTsk;
+  myTsks.appendChild(tskContainer);
+}
+
 window.addEventListener('load', () => {
   insertDays();
   insertBtnHoliday();
   insertBtnFriday();
+  for (let index = 0; index < allDays.length; index += 1) {
+    allDays[index].style.lineHeight = '26px';
+    allDays[index].addEventListener('mouseover', zoomIn);
+    allDays[index].addEventListener('mouseleave', zoomOut);
+  }
+  
+  btnAdd.addEventListener('click', addTask);
 });
