@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login {
+  display: block;
+  margin: 10px;
+}
+
+.remember-me {
+  margin-right: 0;
+  display: inline;
+}
