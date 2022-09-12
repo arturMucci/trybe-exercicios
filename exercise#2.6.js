@@ -14,5 +14,4 @@ function retornaSomatorio(n) {
   return somatorio;
 }
 
-let resultado = retornaSomatorio(n);
-console.log(resultado);
+console.log(retornaSomatorio(n));
