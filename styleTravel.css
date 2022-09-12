@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 10px;
+}
+
+label {
+  margin-left: 10px;
+  display: block;
+  margin-top: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+button {
+  margin: 10px;
+  padding: 5px 10px;
+}
+
+.form-travel {
+  margin: 10px;
+  border: 1px solid black;
+  width: 560px;
+}
+
+#name, #email, #travel-date {
+  display: block;
+  margin: 10px;
+}
+
+#concordo1, #concordo2 {
+  margin: 10px;
+}
+
+#why {
+  display: block;
+  margin: 10px;
+  width: 510px;
+  height: 100px;
+}
