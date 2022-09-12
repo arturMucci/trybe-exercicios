@@ -11,6 +11,6 @@ INPUT_CHECKBOX.addEventListener('click', (event) => {
   event.preventDefault();
 });
 
-INPUT_TEXT.addEventListener('click', (event) => {
+INPUT_TEXT.addEventListener('keypress', (event) => {
   event.preventDefault();
 });

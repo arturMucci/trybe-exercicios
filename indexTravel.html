@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styleTravel.css">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <header>
+    <h1>Header da página</h1>
+  </header>
+  <form action="post" class="form-travel">
+    <fieldset id="nomeEEmail">
+      <label for="name">Nome<input type="text" name="name" id='name' placeholder="Nome Completo" min="10" max="40"></label>
+      <label for="email">Email<input type="text" name="email" id="email" placeholder="ada@lovelace.com" min="10" max="50"></label>
+      <label for="fav-destination"> <input type="radio" name="destination" id="city"> Cidade <input type="radio" name="destination" id="countryside"> Campo <input type="radio" name="destination" id="beach"> Praia <input type="radio" name="destination" id="mountain"> Montanha </label>
+      <label for="why">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?<textarea name="why" id="why" max="500"></textarea></label>
+      <label for="travel-date"> Qual a melhor data para realizar sua viagem? <input type="date" name="date" id="travel-date"></label>
+      <label for="concordo1"><input type="checkbox" name="concordo1" id="concordo1" required>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+      <label for="concordo2" required><input type="checkbox" name="concordo2" id="concordo2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      <button type="submit" id="submit-btn">Enviar</button>
+      <button type="reset" id="clear-btn">Limpar</button>
+    </fieldset>
+  </form>
+  <script src="scriptTravel.js"></script>
+</body>
+
+</html>
