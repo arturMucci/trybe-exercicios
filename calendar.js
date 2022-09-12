@@ -120,12 +120,16 @@ function zoomOut(event) {
 function addTask() {
   const tskContainer = document.createElement('section');
   const newTsk = document.createElement('span');
+  const colorTsk = document.getElementById('tsk-color').value;
   newTsk.innerText = tskInput.value;
   newTsk.style.backgroundColor = 
   tskContainer.appendChild(newTsk);
   tskContainer.className = 'task';
+  tskContainer.style.width = '80%';
+  tskContainer.style.justifyContent = 'center';
   tskContainer.style.backgroundColor = colorTsk;
   myTsks.appendChild(tskContainer);
+  tskInput.value = '';
 }
 
 window.addEventListener('load', () => {
@@ -137,6 +141,5 @@ window.addEventListener('load', () => {
     allDays[index].addEventListener('mouseover', zoomIn);
     allDays[index].addEventListener('mouseleave', zoomOut);
   }
-  
   btnAdd.addEventListener('click', addTask);
 });
