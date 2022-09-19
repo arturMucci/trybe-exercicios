@@ -1,13 +1,2 @@
-let longestWord = 'Antônio foi ao banheiro e não sabemos o que aconteceu'; // retorna 'aconteceu'
-
-const returnLongestWord = (arrayString) => {
-  let maior = '';
-  arrayString.forEach(element => {
-    if (element.length > maior.length) {
-      maior = element;
-    }
-  });
-  return maior;
-}
-
-console.log(returnLongestWord(longestWord.split(' ')));
+longestWord = (string) => arrayString = string.split(' ').sort((a, b) => b.length - a.length)[0];
+console.log(longestWord('Antônio foi ao banheiro e não sabemos o que aconteceu'));
