@@ -1,3 +1,3 @@
-const { myFizzBuzz } = require('../script');
+const { describe } = require('yargs');
 
-myFizzBuzz();
+describe()
