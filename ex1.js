@@ -3,16 +3,16 @@ const geraEmail = (nome) => {
   return { nome : nome , email : email};
 }
 
-const newEmployees = (employee) => {
+const newEmployees = (func) => {
   const employees = {
     // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
-    id1: geraEmail('Pedro Guerra'), 
+    id1: func('Pedro Guerra'), 
     // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
-    id2: geraEmail('Luiza Drumond'), 
+    id2: func('Luiza Drumond'), 
     // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
-    id3: geraEmail('Carla Paiva'), 
+    id3: func('Carla Paiva'), 
   }
-  return employees;
+  return console.log(employees);
 };
 
-console.log(newEmployees());
+newEmployees(geraEmail);
