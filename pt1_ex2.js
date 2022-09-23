@@ -2,6 +2,6 @@
 // recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado. 
 // O retorno da sua HOF deve ser uma string (Ex: “Tente novamente” ou “Parabéns você ganhou”).
 
-const randomNum = (max) => Math.ceil(Math.random() * max);
+const randomNum = (max) => Math.round(Math.random() * max);
 const resultadoSorteio = (teste, randomNumber) => console.log(teste == randomNumber(5) ? 'Parabéns você ganhou' : 'Tente novamente');
 resultadoSorteio(1, randomNum);
