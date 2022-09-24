@@ -67,9 +67,10 @@ const books = [
 const autorNascido1947 = books.find((element) => element.author.birthYear === 1947).author.name;
 
 // Ex.2 - Retorne o nome do livro de menor nome.
-let greaterName = '';
+let greaterName = books[0].name;
+
 const maiorNome = books.forEach((element) => {
-  greaterName = element.name.length > greaterName.length ? element.name : greaterName;
+  greaterName = element.name.length < greaterName.length ? element.name : greaterName;
 });
 
 // Ex.3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
@@ -78,17 +79,19 @@ const nome26 = books.forEach((element) => {
   firstLength26 = element.name.length === 26 ? element.name : firstLength26;
 });
 
-// {
-//   id: 6,
-//   name: 'O Chamado de Cthulhu',
-//   genre: 'Terror',
-//   author: {
-//     name: 'H. P. Lovecraft',
-//     birthYear: 1890,
-//   },
-//   releaseYear: 1928,
-// },
+// Ex.4 - Ordene os livros por data de lançamento em ordem decrescente.
+const releaseDateBackwards = () => {
+  return books.sort((a, b) => b.releaseYear - a.releaseYear);
+}
+
+// Ex.5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
+const expectedResult = false;
+
+function everyoneWasBornOnSecXX() {
+  // escreva seu código aqui
+}
 
 console.log(autorNascido1947);
 console.log(greaterName);
 console.log(firstLength26);
+console.log(releaseDateBackwards());
