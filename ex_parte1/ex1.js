@@ -63,6 +63,25 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+// Ex.1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
 const autorNascido1947 = books.find((element) => element.author.birthYear === 1947).author.name;
 
+// Ex.2 - Retorne o nome do livro de menor nome.
+let greaterName = '';
+const maiorNome = books.forEach((element) => {
+  greaterName = element.name.length > greaterName.length ? element.name : greaterName;
+});
+
+// {
+//   id: 6,
+//   name: 'O Chamado de Cthulhu',
+//   genre: 'Terror',
+//   author: {
+//     name: 'H. P. Lovecraft',
+//     birthYear: 1890,
+//   },
+//   releaseYear: 1928,
+// },
+
 console.log(autorNascido1947);
+console.log(greaterName);
