@@ -72,6 +72,12 @@ const maiorNome = books.forEach((element) => {
   greaterName = element.name.length > greaterName.length ? element.name : greaterName;
 });
 
+// Ex.3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
+let firstLength26 = '';
+const nome26 = books.forEach((element) => {
+  firstLength26 = element.name.length === 26 ? element.name : firstLength26;
+});
+
 // {
 //   id: 6,
 //   name: 'O Chamado de Cthulhu',
@@ -85,3 +91,4 @@ const maiorNome = books.forEach((element) => {
 
 console.log(autorNascido1947);
 console.log(greaterName);
+console.log(firstLength26);
