@@ -67,9 +67,9 @@ const books = [
 // const autorNascido1947 = books.find((element) => element.author.birthYear === 1947).author.name;
 
 // Ex.2 - Retorne o nome do livro de menor nome.
-// let greaterName = books[0].name;
+// let smallerName = books[0].name;
 // const maiorNome = books.forEach((element) => {
-//   greaterName = element.name.length < greaterName.length ? element.name : greaterName;
+//   smallerName = element.name.length < smallerName.length ? element.name : smallerName;
 // });
 
 // Ex.3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
@@ -111,7 +111,7 @@ const books = [
 // };
 
 // console.log(autorNascido1947);
-// console.log(greaterName);
+console.log(smallerName);
 // console.log(firstLength26);
 // console.log(releaseDateBackwards());
 // console.log(everyoneWasBornOnSecXX);
