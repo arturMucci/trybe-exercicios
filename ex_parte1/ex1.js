@@ -64,34 +64,44 @@ const books = [
 // Adicione o código do exercício aqui:
 
 // Ex.1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.
-const autorNascido1947 = books.find((element) => element.author.birthYear === 1947).author.name;
+// const autorNascido1947 = books.find((element) => element.author.birthYear === 1947).author.name;
 
 // Ex.2 - Retorne o nome do livro de menor nome.
-let greaterName = books[0].name;
-
-const maiorNome = books.forEach((element) => {
-  greaterName = element.name.length < greaterName.length ? element.name : greaterName;
-});
+// let greaterName = books[0].name;
+// const maiorNome = books.forEach((element) => {
+//   greaterName = element.name.length < greaterName.length ? element.name : greaterName;
+// });
 
 // Ex.3 - Encontre o primeiro livro cujo nome possui 26 caracteres.
-let firstLength26 = '';
-const nome26 = books.forEach((element) => {
-  firstLength26 = element.name.length === 26 ? element.name : firstLength26;
-});
+// let firstLength26 = '';
+// const nome26 = books.forEach((element) => {
+//   firstLength26 = element.name.length === 26 ? element.name : firstLength26;
+// });
 
 // Ex.4 - Ordene os livros por data de lançamento em ordem decrescente.
-const releaseDateBackwards = () => {
-  return books.sort((a, b) => b.releaseYear - a.releaseYear);
-}
+// const releaseDateBackwards = () => {
+//   return books.sort((a, b) => b.releaseYear - a.releaseYear);
+// }
 
 // Ex.5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
 const expectedResult = false;
+const everyoneWasBornOnSecXX = books.forEach((element) => {
+  
+});
 
-function everyoneWasBornOnSecXX() {
-  // escreva seu código aqui
-}
+// {
+//   id: 6,
+//   name: 'O Chamado de Cthulhu',
+//   genre: 'Terror',
+//   author: {
+//     name: 'H. P. Lovecraft',
+//     birthYear: 1890,
+//   },
+//   releaseYear: 1928,
+// },
 
-console.log(autorNascido1947);
-console.log(greaterName);
-console.log(firstLength26);
-console.log(releaseDateBackwards());
+// console.log(autorNascido1947);
+// console.log(greaterName);
+// console.log(firstLength26);
+// console.log(releaseDateBackwards());
+console.log(everyoneWasBornOnSecXX);
