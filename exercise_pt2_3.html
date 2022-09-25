@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #button {
+      height: 50px;
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    #span {
+      margin-left: 10px;
+      
+    }
+  </style>
   <title>Document</title>
 </head>
-<body>
-  
+
+<body id="body">
+  <button id="button"></button>
+  <span id="span"></span>
+  <script>
+    const body = document.getElementById('body');
+    const button = document.getElementById('button');
+    const span = document.getElementById('span');
+    let contador = 0;
+    button.style.fontSize = '30px';
+    button.innerText = 'click aqui!';
+    span.innerText = contador;
+    span.style.fontSize = '30px';
+    const contaClick = () => {
+      contador += 1;
+      span.innerText = contador;
+    }
+    button.addEventListener('click', () => contaClick());
+    window.addEventListener('onload', () => {
+    });
+  </script>
 </body>
+
 </html>
