@@ -61,4 +61,3 @@ const gameActions = {
 
 console.log(gameActions.warriorShift);
 console.log(dragon);
-
