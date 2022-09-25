@@ -84,24 +84,36 @@ const books = [
 // }
 
 // Ex.5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
-const expectedResult = false;
-const everyoneWasBornOnSecXX = books.forEach((element) => {
-  
-});
+// const expectedResult = false;
 
-// {
-//   id: 6,
-//   name: 'O Chamado de Cthulhu',
-//   genre: 'Terror',
-//   author: {
-//     name: 'H. P. Lovecraft',
-//     birthYear: 1890,
-//   },
-//   releaseYear: 1928,
-// },
+// const everyoneWasBornOnSecXX = books.every((element) => {
+//   const stringElement = element.author.birthYear.toString();
+//   return stringElement.startsWith('19');
+// })
+
+// Ex.5 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+// const expectedResult = true;
+
+// const someBookWasReleaseOnThe80s = books.some((element) => {
+//   const stringElement = element.releaseYear.toString();
+//   return stringElement[1] === '9' && stringElement[2] === '8';
+// })
+
+// Ex.6 - Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+// let test = 0;
+// const authorUnique = () => {
+//   books.forEach((element1) => {
+//     books.forEach((element2) => {
+//       test += element1.author.birthYear === element2.author.birthYear ? 1 : 0;
+//     });
+//   })
+//   return test === 6;
+// };
 
 // console.log(autorNascido1947);
 // console.log(greaterName);
 // console.log(firstLength26);
 // console.log(releaseDateBackwards());
-console.log(everyoneWasBornOnSecXX);
+// console.log(everyoneWasBornOnSecXX);
+// console.log(someBookWasReleaseOnThe80s);
+// console.log(authorUnique());
