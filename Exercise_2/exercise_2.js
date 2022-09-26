@@ -34,9 +34,10 @@ const order = {
   },
 };
 
+const deliveryPerson = order.order.delivery.deliveryPerson;+
+
 const customerInfo = (order) => {
   // Adicione abaixo as informações necessárias.
-  const {order: } = 
   console.log(`Olá ${}, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701`
 };
 

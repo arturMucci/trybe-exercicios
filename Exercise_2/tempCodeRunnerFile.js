@@ -1,1 +1,0 @@
-const delivery = order.order.delivery.deliveryPerson;
