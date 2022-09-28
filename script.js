@@ -95,7 +95,7 @@ const names = [
   'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
-const containsA = names.reduce((acc, curr) => acc + curr).split('').reduce((acc, curr) => acc += ['a', 'A'].includes(curr) ? 1 : 0, 0);
+const containsA = names.reduce((acc, curr) => acc + curr).split('').filter((string) => ['a', 'A'].includes(string)).length;
 
 // Exercício 4
 //Para o próximo exercício você deve criar um novo array de objetos a partir das informações de students e grades, onde cada objeto desse novo array terá o formato { name: nome do aluno, average: media das notas }. Para isso vamos assumir que a posição 0 de grades refere-se ao estudante na posição 0 de students. Para resolver este exercício, além de reduce, será necessário utilizar também a função map.
