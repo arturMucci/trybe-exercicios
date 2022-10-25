@@ -17,7 +17,6 @@ class App extends Component {
     this.setState((prev) => ({
       clicksBtn1: prev.clicksBtn1 + 1,
     }))
-
   }
 
   handleClick2 = () => {
@@ -33,7 +32,7 @@ class App extends Component {
   }
 
   chooseColor = (act) => {
-    return act % 2 === 0 ? 'green' : 'rgb(239, 239, 239)';
+    return act % 2 === 0 ? 'rgb(239, 239, 239)' : 'green';
   }
 
   clear = () => {
