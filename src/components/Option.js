@@ -4,7 +4,7 @@ class Option extends Component {
   render() {
     const { sabor } = this.props;
     return (
-      <option>{sabor}</option>
+      <option>{ sabor }</option>
     )
   }
 }

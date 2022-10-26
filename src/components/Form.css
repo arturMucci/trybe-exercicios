@@ -9,6 +9,10 @@
   flex-direction: column;
 }
 
+.Form div {
+  margin-top: 10px;
+}
+
 label {
   margin: 10px 0;
 }
